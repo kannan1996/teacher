@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>student Details</title>
+</head>
+<body>
+<table>
+	<tr>
+		<th>Stu_Name</th>
+		<th>Age</th>
+		<th>Total</th>
+		<th>Rank</th>
+	</tr>
+
+{% for st in student %}
+<tr>
+<td>{{st.stu_name}}</td>
+<td>{{st.age}}</td>
+</tr>
+{% endfor %}
+</table>
+</body>
+</html>

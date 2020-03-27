@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Student Marks</title>
+</head>
+<body>
+	<form method="POST">{% csrf_token %}
+<table>
+<tr>
+	<th>Sno</th>
+	<th>Stu_Name</th>
+	<th>Marks</th>
+</tr>
+<tr>
+{% for i in stud_detail %}
+<td>{{forloop.counter}}</td>
+<td>{{i.stu_name}}</td>
+<td><input type="number" name="mark"></td>
+</tr>
+{% endfor %}
+</table>
+<input type="submit" value="submit">
+</form>
+</body>
+</html>
